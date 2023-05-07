@@ -1,5 +1,5 @@
 import discord
-from redbot.core import commands, app_commands
+from redbot.core import commands
 import aiohttp
 from aiocache import cached, SimpleMemoryCache
 
@@ -11,9 +11,9 @@ BaseCog = getattr(commands, "Cog", object)
 class Pokemon(BaseCog):
     """Show Pokemon info"""
 
-    @app_commands.command()
+    @commands.command()
     @cached(ttl=3600, cache=SimpleMemoryCache)
-    @app_commands.bot_has_permissions(embed_links=True)
+    @commands.bot_has_permissions(embed_links=True)
     async def pokemon(self, ctx, name_or_id):
         """Show pokemon info"""
 
