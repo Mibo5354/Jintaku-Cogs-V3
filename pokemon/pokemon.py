@@ -14,7 +14,7 @@ class Pokemon(BaseCog):
     @commands.command()
     @cached(ttl=3600, cache=SimpleMemoryCache)
     @commands.bot_has_permissions(embed_links=True)
-    async def pokemon(self, ctx, name_or_id):
+    async def pokedex(self, ctx, name_or_id):
         """Show pokemon info"""
 
         try:
